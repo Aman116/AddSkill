@@ -2,6 +2,7 @@
     <head>
         <title>Spell Checking</title>
         <link rel="stylesheet" href="grammer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <style>
             .div1{
                 margin-left: 550px;
@@ -21,6 +22,7 @@
         <input type="file" id="myFile">
     </div>
         <textarea id="demo" style="width:400px;height:150px;"></textarea>
+        <button type="button" value="click" id="clicking">Click</button>
      <script type="text/javascript"> 
         document.getElementById('myFile') 
             .addEventListener('change', function() { 
@@ -32,13 +34,36 @@
             } 
               
             x.readAsText(this.files[0]); 
-        }) 
-        document.getElementById('demo').addEventListener('ondbclick',()=>{
-                if()
-            })
-            fetch('https://api.textgears.com/spelling?key=1gVny1rfj02gy7kY&text=my%20name%20is%20amna%20sigh%20solanki&language=en-GB')
+        }) ;
+        clicking.onclick=function(){
+            var res=document.getElementById("demo").textContent;
+            apiCall(res);
+        };
+        function apiCall(text){
+            var requestOption={
+                method:"GET",
+                redirect:'follow'
+            };
+            fetch(`https://api.textgears.com/spelling?key=1gVny1rfj02gy7kY&text=${text}&language=en-GB`,requestOption)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data=>{
+                let res1=JSON.parse(data)
+             for(let i=0;i<res1.errors.length;i++)
+             {
+                    let err=res1.errors[i].bad;
+                    document.getElementById("demo").ondbclick()=function(){
+                        for(let j=0;j<res1.errors[i].better.length;j++)
+                    {
+                        document.getElementById("demo").textContent=res1.errors[i].better[j];
+                    }
+            };
+
+        }
+    }
+};
+
+       
+
     </script> 
     </body>
 </html>
