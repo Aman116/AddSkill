@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Currency Converter</title>
+    </head>
+    <style>
+        #container{
+            width: 400px;
+            height: 250px;
+            margin: 0px auto;
+            border: 2px solid black;
+        }
+        div input{
+            text-align:center;
+        }
+    </style>
+    <body onload="changeCurrency();">
+        <div id="container">
+            <h1 style="text-align: center;">Currency Converter</h1>
+               <!-- <label for="Base Currency">Base Currency</label>-->
+                <input type="text" class="form-control" id="fromAmount" value="1">
+                <select class="form-control" id="from" onchange="changeCurrency();">
+                    <option>USD</option>
+                    <option>HKD</option>
+                    <option>ISK</option>
+                    <option>PHP</option>
+                    <option>DKK</option>
+                    <option>HUF</option>
+                    <option>CZK</option>
+                    <option>GBP</option>
+                    <option>RON</option>
+                    <option>SEK</option>
+                    <option>IDR</option>
+                    <option>INR</option>
+                    <option>BRL</option>
+                    <option>RUB</option>
+                    <option>HRK</option>
+                    <option>JPY</option>
+                    <option>THB</option>
+                    <option>CHF</option>
+                    <option>EUR</option>
+                    <option>MYR</option>
+                    <option>BGN</option>
+                    <option>TRY</option>
+                    <option>CNY</option>
+                    <option>NOK</option>
+                    <option>NZD</option>
+                    <option>ZAR</option>
+                    <option>CAD</option>
+                    <option>MXN</option>
+                    <option>SGD</option>
+                    <option>AUD</option>
+                    <option>ILS</option>
+                    <option>KRW</option>
+                    <option>PLN</option>
+                </select>
+                <br>
+               <!-- <label for="Target Currency">Target Currency</label>-->
+                <input type="number" class="form-control" id="toAmount" disabled>
+                <select class="form-control" id="to" onchange="changeCurrency();">
+                    <option>INR</option>
+                    <option>HKD</option>
+                    <option>ISK</option>
+                    <option>PHP</option>
+                    <option>DKK</option>
+                    <option>HUF</option>
+                    <option>CZK</option>
+                    <option>GBP</option>
+                    <option>RON</option>
+                    <option>SEK</option>
+                    <option>IDR</option>
+                    <option>CAD</option>
+                    <option>BRL</option>
+                    <option>RUB</option>
+                    <option>HRK</option>
+                    <option>JPY</option>
+                    <option>THB</option>
+                    <option>CHF</option>
+                    <option>EUR</option>
+                    <option>MYR</option>
+                    <option>BGN</option>
+                    <option>TRY</option>
+                    <option>CNY</option>
+                    <option>NOK</option>
+                    <option>NZD</option>
+                    <option>ZAR</option>
+                    <option>USD</option>
+                    <option>MXN</option>
+                    <option>SGD</option>
+                    <option>AUD</option>
+                    <option>ILS</option>
+                    <option>KRW</option>
+                    <option>PLN</option>
+                </select>
+        </div>
+    </body>
+    <script src="currency.js"></script>
+</html>

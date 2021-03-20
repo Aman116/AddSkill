@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-COMMERCE WEBSITE</title>
+        <link rel="stylesheet" href="Assign3.css">
+        <script type="text/javascript" src="Assign3.js"></script>
+    </head>
+<body>
+    <header class="div1h">
+        <nav>
+            <ul>
+                <li><a href="section1"> contact</a></li>
+                <li><a href="signup.html"> signup</a></li>
+                <li><a href="section3"> Add to cart</a></li>
+        </ul>
+        </nav>
+        <h3>MYCART</h3>
+        <h6><i>VISIT ONCE AGAIN</i></h6>
+       <!-- <label for="cars">Choose vegetable or fruit:</label> -->
+       <div class="c1">
+        <select id="eat" name="eat">
+          <option value="veg">Veg</option>
+          <option value="fruit">Fruit</option>
+        </select>
+        <input type="text" class="div1d" id="myInput" onkeyup="myFunction()" placeholder="Search an item"/>
+        </div>
+        </header>
+        <table id="myTable" onmouseenter="changeCol(this)" onmouseleave="normalCol(this)">
+            <tr class="header">
+              <th style="width:30%;">Name</th>
+              <th style="width:30%;">Type</th>
+              <th style="width:30%;">Price</th>
+            </tr>
+            <tr>
+              <td>Apple</td>
+              <td>Fruit</td>
+              <td>140</td>
+            </tr>
+            <tr>
+              <td>Banana</td>
+              <td>Fruit</td>
+              <td>130</td>
+            </tr>
+            <tr>
+              <td>Tomato</td>
+              <td>Veg</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>Potato</td>
+              <td>Veg</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td>Pineapple</td>
+              <td>Fruit</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Onion</td>
+              <td>Veg</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>Mango</td>
+              <td>Fruit</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>Guava</td>
+              <td>Fruit</td>
+              <td>110</td>
+            </tr>
+          </table>
+</body>
+</html>
