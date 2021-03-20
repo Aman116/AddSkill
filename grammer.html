@@ -20,9 +20,6 @@
         <div class="div1">
         <input type="file" id="myFile">
     </div>
-        <!--<span>
-            <button type="btn" value="upload"> upload</button>
-        </span>-->
         <textarea id="demo" style="width:400px;height:150px;"></textarea>
      <script type="text/javascript"> 
         document.getElementById('myFile') 
@@ -36,6 +33,12 @@
               
             x.readAsText(this.files[0]); 
         }) 
+        document.getElementById('demo').addEventListener('ondbclick',()=>{
+                if()
+            })
+            fetch('https://api.textgears.com/spelling?key=1gVny1rfj02gy7kY&text=my%20name%20is%20amna%20sigh%20solanki&language=en-GB')
+            .then(response => response.json())
+            .then(data => console.log(data));
     </script> 
     </body>
 </html>
