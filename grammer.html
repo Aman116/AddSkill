@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Spell Checking</title>
+        <link rel="stylesheet" href="grammer.css">
+      <style>
+            .div1{
+                margin-left: 550px;
+                margin-top: 100px;
+        }
+        #myFile{
+            width:250px;
+        }
+        #demo{
+            margin-left:500px;
+            margin-top:10px;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="div1">
+        <input type="file" id="myFile">
+    </div>
+        <!--<span>
+            <button type="btn" value="upload"> upload</button>
+        </span>-->
+        <textarea id="demo" style="width:400px;height:150px;"></textarea>
+     <script type="text/javascript"> 
+        document.getElementById('myFile') 
+            .addEventListener('change', function() { 
+              
+            var x=new FileReader(); 
+            x.onload=function(){ 
+                document.getElementById('demo') 
+                        .textContent=x.result; 
+            } 
+              
+            x.readAsText(this.files[0]); 
+        }) 
+    </script> 
+    </body>
+</html>
